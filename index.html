@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ready Flow</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ready Flow">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0e0f11">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+  :root{
+    --bg:#0e0f11; --panel:#17191c; --panel2:#1d2024; --line:#26292e; --txt:#eceef1; --mut:#8b9099;
+    --acc:#f2f2f2; --accTxt:#0e0f11; --warn:#e8b04a; --ok:#5fcf8a; --bad:#ff6b6b; --blue:#4da3ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--txt);font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+  body{padding:calc(env(safe-area-inset-top) + 14px) calc(env(safe-area-inset-right) + 14px) calc(env(safe-area-inset-bottom) + 28px) calc(env(safe-area-inset-left) + 14px)}
+  button,label{font:inherit;color:inherit;-webkit-tap-highlight-color:transparent}
+  .wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  h1{font-size:22px;font-weight:700;letter-spacing:-.01em;word-break:break-word}
+  .sub{color:var(--mut);font-size:14px;margin-top:3px}
+  .mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:12.5px;word-break:break-all}
+  .top{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:36px}
+  .back{background:none;border:0;color:var(--blue);font-size:16px;padding:6px 0;text-align:left;max-width:70%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .icon{background:var(--panel);border:1px solid var(--line);border-radius:10px;width:40px;height:36px;font-size:18px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:12px}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .lbl{font-size:14px;color:var(--mut)}
+  .val{font-variant-numeric:tabular-nums;font-weight:650;font-size:17px;min-width:2.5ch;text-align:right}
+  .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .btn{border:0;border-radius:13px;padding:14px 10px;font-size:16px;font-weight:600;background:var(--line);color:var(--txt);text-align:center}
+  .btn.pri{background:var(--acc);color:var(--accTxt)}
+  .btn.danger{background:#3a1f22;color:#ffb3b3}
+  .btn.full{grid-column:1/-1}
+  .btn:disabled{opacity:.45}
+  .ghost{background:none;border:1px solid var(--line);color:var(--txt);border-radius:12px;padding:10px;font-size:15px}
+  .seg{display:flex;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:3px}
+  .seg button{flex:1;border:0;background:transparent;color:var(--mut);font-size:14.5px;padding:8px 4px;border-radius:8px}
+  .seg button.on{background:var(--line);color:var(--txt);font-weight:600}
+  .bar{height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--ok)}
+  .text{width:100%;background:var(--bg);border:1.5px solid var(--line);color:var(--txt);border-radius:10px;padding:11px 12px;font:inherit;font-size:16px;caret-color:var(--blue)}
+  .text:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(77,163,255,.28)}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .empty{color:var(--mut);text-align:center;padding:30px 10px;font-size:15px}
+  .note{font-size:13px;color:var(--warn)}
+  .err{font-size:13px;color:var(--bad)}
+  .hidden{display:none!important}
+
+  /* lista paczek */
+  .pack{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:9px;text-align:left;width:100%}
+  .pack b{font-size:17px}
+  .pack .meta{display:flex;justify-content:space-between;color:var(--mut);font-size:13.5px}
+
+  /* zestawy */
+  .set{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:10px;text-align:left;width:100%}
+  .set.ok{border-color:#24402f}
+  .sethead{display:flex;align-items:center;gap:8px;min-width:0}
+  .no{font-variant-numeric:tabular-nums;font-weight:700;background:var(--line);border-radius:7px;padding:2px 7px;font-size:13.5px;flex:none}
+  .st{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600;font-size:15px}
+  .st i{font-style:normal;color:var(--mut);font-weight:500}
+  .pill{flex:none;font-size:12px;font-weight:650;border-radius:99px;padding:3px 9px}
+  .pill.ok{background:#173523;color:var(--ok)}
+  .pill.miss{background:#3a2e14;color:var(--warn)}
+  .misses{font-size:13px;color:var(--warn)}
+  .warns{display:flex;flex-direction:column;gap:3px}
+  .warns div{font-size:13px;color:var(--warn)}
+  .warns div::before{content:"⚠︎ "}
+  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .tile{position:relative;aspect-ratio:9/19.5;border-radius:12px;background:#000;border:1px solid var(--line);overflow:hidden;display:flex;align-items:center;justify-content:center;padding:0;width:100%}
+  .tile img{width:100%;height:100%;object-fit:contain;display:block}
+  .tile.ph{background:var(--panel2);border:1.5px dashed #3a3e45;color:var(--mut);flex-direction:column;gap:4px;font-size:13px;text-align:center;padding:6px}
+  .tile.ph b{font-size:24px;font-weight:400;color:var(--txt)}
+  .tile.ph.off{opacity:.55}
+  .tag{position:absolute;left:6px;top:6px;background:rgba(0,0,0,.65);color:#fff;font-size:11px;font-weight:650;padding:2px 7px;border-radius:99px;letter-spacing:.02em}
+  .dims{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#ddd;font-size:10.5px;padding:10px 4px 4px;text-align:center;font-variant-numeric:tabular-nums}
+  .tile.ok-ring{box-shadow:inset 0 0 0 1.5px rgba(95,207,138,.5)}
+
+  /* edytor */
+  .ed{position:fixed;inset:0;background:var(--bg);z-index:10;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none;
+      padding:calc(env(safe-area-inset-top) + 14px) calc(env(safe-area-inset-right) + 14px) calc(env(safe-area-inset-bottom) + 28px) calc(env(safe-area-inset-left) + 14px)}
+  .ed.on{display:block}
+  .stage{position:relative;border-radius:14px;overflow:hidden;background:#000;touch-action:none;user-select:none;-webkit-user-select:none;display:flex;justify-content:center}
+  .stage canvas{display:block;max-width:100%;max-height:60vh;width:auto;height:auto}
+  .badge{position:absolute;left:10px;top:10px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:4px 9px;border-radius:99px;pointer-events:none;opacity:0;transition:opacity .15s}
+  .badge.on{opacity:1}
+  .hint{color:var(--mut);font-size:13px}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:32px;background:transparent}
+  input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--acc) var(--p,0%),var(--line) var(--p,0%))}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;margin-top:-11px;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+  input[type=range]::-moz-range-track{height:6px;border-radius:3px;background:var(--line)}
+  input[type=range]::-moz-range-progress{height:6px;border-radius:3px;background:var(--acc)}
+  input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#fff;border:0}
+  .names{display:flex;flex-direction:column;gap:8px}
+  .names div{display:flex;gap:8px;align-items:flex-start}
+  .names .v{flex:none;width:44px;font-size:12px;font-weight:650;color:var(--mut);padding-top:1px}
+  .names .miss{color:var(--mut);text-decoration:line-through}
+  .links{display:flex;flex-direction:column;gap:6px}
+  .link{background:none;border:0;color:var(--mut);font-size:14px;text-decoration:underline;padding:4px 0;text-align:left}
+
+  /* okna */
+  .dlg{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:40;display:none;align-items:flex-end;justify-content:center;padding:12px 12px calc(env(safe-area-inset-bottom) + 12px)}
+  .dlg.on{display:flex}
+  .dlgbox{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px;width:100%;max-width:520px;display:flex;flex-direction:column;gap:12px;max-height:88vh;overflow-y:auto}
+  .dlgbox h3{font-size:17px;font-weight:650}
+  .dlgbox .txt{font-size:14.5px;color:#c9ccd2;white-space:pre-line}
+  .dlgbtns{display:flex;flex-direction:column;gap:8px}
+  .dlgbtns .btn{width:100%;padding:13px 10px}
+  #saveSheet{z-index:70}
+  .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom) + 20px);transform:translateX(-50%) translateY(20px);opacity:0;
+         background:#2a2d33;color:#fff;padding:11px 16px;border-radius:12px;font-size:14px;max-width:min(92vw,520px);text-align:center;transition:.2s;pointer-events:none;z-index:80}
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+  .busy{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+  .busy.on{display:flex}
+  .busy>div{background:var(--panel);border:1px solid var(--line);padding:16px 18px;border-radius:14px;font-size:15px;display:flex;gap:12px;align-items:center;max-width:420px}
+  .busy small{display:block;color:var(--mut);font-size:12px;margin-top:3px;word-break:break-all}
+  .spin{width:18px;height:18px;flex:none;border-radius:50%;border:2.5px solid var(--line);border-top-color:#fff;animation:sp .8s linear infinite}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  .ov{position:fixed;inset:0;background:#000;z-index:45;display:none;flex-direction:column;
+      padding:calc(env(safe-area-inset-top) + 12px) 12px calc(env(safe-area-inset-bottom) + 12px)}
+  .ov.on{display:flex}
+  .ov .top{color:#ccc;font-size:13px;margin-bottom:10px}
+  .ov .im{flex:1;display:flex;align-items:center;justify-content:center;min-height:0}
+  .ov img{max-width:100%;max-height:100%;object-fit:contain}
+  input[type=file]{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><div class="empty">Ładuję…</div></div>
+
+<div class="ed" id="ed"></div>
+
+<input type="file" id="fileIn" accept="image/*">
+
+<div class="dlg" id="dlg"><div class="dlgbox" id="dlgBox"></div></div>
+<div class="dlg" id="saveSheet"><div class="dlgbox">
+  <h3 id="ssTitle">Plik gotowy</h3>
+  <div class="mono" id="ssName"></div>
+  <div class="hint" id="ssHint"></div>
+  <div class="dlgbtns"><button class="btn pri" id="ssOk">Zapisz</button><button class="btn" id="ssCancel">Anuluj</button></div>
+</div></div>
+<div class="busy" id="busy"><div><span class="spin"></span><div><span id="busyTxt">Pracuję…</span><small id="busySub"></small></div></div></div>
+<div class="toast" id="toast"></div>
+<div class="ov" id="ov">
+  <div class="top"><span id="ovCap" class="mono"></span><button class="ghost" id="ovClose">Zamknij</button></div>
+  <div class="im"><img id="ovImg" alt=""></div>
+</div>
+
+<script>
+// ================= Pamięć lokalna: zastępuje zapis Claude (IndexedDB w przeglądarce) =================
+(() => {
+  'use strict';
+  const DB_NAME = 'readyflow', DB_VER = 1, COLLS = ['packs', 'sets'];
+  const err = (code, message) => Object.assign(new Error(message || code), { code });
+  const clone = o => o == null ? o : JSON.parse(JSON.stringify(o));
+
+  function openDb() {
+    return new Promise((res, rej) => {
+      if (!('indexedDB' in window)) return rej(err('unavailable'));
+      let r;
+      try { r = indexedDB.open(DB_NAME, DB_VER); } catch (e) { return rej(e); }
+      r.onupgradeneeded = () => { const d = r.result; [...COLLS, 'blobs'].forEach(n => { if (!d.objectStoreNames.contains(n)) d.createObjectStore(n); }); };
+      r.onsuccess = () => res(r.result);
+      r.onerror = () => rej(r.error);
+      r.onblocked = () => rej(err('blocked'));
+    });
+  }
+  function tx(idb, store, mode, fn) {
+    return new Promise((res, rej) => {
+      let t; try { t = idb.transaction(store, mode); } catch (e) { return rej(e); }
+      let out; const rq = fn(t.objectStore(store));
+      if (rq) rq.onsuccess = () => { out = rq.result; };
+      t.oncomplete = () => res(out);
+      const fail = () => { const e = t.error || (rq && rq.error); rej(err(e && e.name === 'QuotaExceededError' ? 'quota_exceeded' : 'write_failed', e && e.message)); };
+      t.onerror = fail; t.onabort = fail;
+    });
+  }
+  function loadAll(idb, store) {
+    return new Promise((res, rej) => {
+      const out = new Map(); const t = idb.transaction(store); const c = t.objectStore(store).openCursor();
+      c.onsuccess = () => { const cur = c.result; if (cur) { out.set(cur.key, cur.value); cur.continue(); } };
+      t.oncomplete = () => res(out); t.onerror = () => rej(t.error);
+    });
+  }
+
+  function makeDb(idb, mem) {
+    const subs = new Set();
+    const snap = (coll, filter) => {
+      const docs = [];
+      mem[coll].forEach((v, id) => { if (!filter || v[filter.f] === filter.v) docs.push({ id, exists: true, data: () => clone(v) }); });
+      return { docs, size: docs.length, empty: !docs.length, metadata: { fromCache: false } };
+    };
+    let pending = new Set(), timer = null;
+    const notify = coll => {
+      pending.add(coll); if (timer) return;
+      timer = setTimeout(() => {
+        timer = null; const cs = pending; pending = new Set();
+        subs.forEach(s => { if (cs.has(s.coll)) { try { s.cb(snap(s.coll, s.filter)); } catch (e) { console.error(e); } } });
+      }, 0);
+    };
+    const persist = (coll, id) => { const v = mem[coll].get(id); return tx(idb, coll, 'readwrite', s => v === undefined ? s.delete(id) : s.put(v, id)); };
+    const query = (coll, filter) => ({
+      where: (f, op, v) => query(coll, { f, v }),
+      onSnapshot(cb) {
+        const s = { coll, filter, cb }; subs.add(s);
+        setTimeout(() => { if (subs.has(s)) cb(snap(coll, filter)); }, 0);
+        return () => subs.delete(s);
+      },
+      get: async () => snap(coll, filter)
+    });
+    const doc = path => {
+      const [coll, id] = String(path).split('/');
+      if (!mem[coll] || !id) throw err('bad_request', 'path ' + path);
+      return {
+        async set(data) { const old = mem[coll].get(id); mem[coll].set(id, clone(data)); notify(coll); try { await persist(coll, id); } catch (e) { old === undefined ? mem[coll].delete(id) : mem[coll].set(id, old); notify(coll); throw e; } },
+        async update(patch) {
+          const cur = mem[coll].get(id); if (!cur) throw err('not_found');
+          mem[coll].set(id, Object.assign({}, cur, clone(patch))); notify(coll);
+          try { await persist(coll, id); } catch (e) { mem[coll].set(id, cur); notify(coll); throw e; }
+        },
+        async delete() { const old = mem[coll].get(id); mem[coll].delete(id); notify(coll); try { await persist(coll, id); } catch (e) { if (old !== undefined) mem[coll].set(id, old); notify(coll); throw e; } },
+        async get() { const v = mem[coll].get(id); return { id, exists: v !== undefined, data: () => clone(v) }; }
+      };
+    };
+    return { collection: c => query(c, null), doc };
+  }
+
+  // obrazy trzymane jako ArrayBuffer + typ (pewniejsze w Safari niż Blob)
+  function makeAssets(idb) {
+    return {
+      async upload(blob, opts) {
+        const id = 'a' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+        const buf = await blob.arrayBuffer();
+        await tx(idb, 'blobs', 'readwrite', s => s.put({ buf, type: (opts && opts.type) || blob.type || 'application/octet-stream' }, id))
+          .catch(e => { throw err(e.code === 'quota_exceeded' ? 'quota_or_state' : 'unavailable', e.message); });
+        return { id };
+      },
+      async delete(id) { await tx(idb, 'blobs', 'readwrite', s => s.delete(id)); },
+      async get(id) { const v = await tx(idb, 'blobs', 'readonly', s => s.get(id)); return v ? new Blob([v.buf], { type: v.type }) : null; }
+    };
+  }
+
+  // zapis pliku: własne okienko, a z jego przycisku arkusz udostępniania iOS (Save Image / Save to Files)
+  const MIME = { jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp', zip: 'application/zip' };
+  const mb = b => (b / 1048576).toFixed(1).replace('.', ',') + ' MB';
+  let sheetOpen = false;
+  const downloads = {
+    save({ filename, data }) {
+      if (sheetOpen) return Promise.reject(err('rate_limited'));
+      if (!filename || data == null) return Promise.reject(err('bad_request'));
+      const ext = (String(filename).split('.').pop() || '').toLowerCase();
+      const blob = data instanceof Blob ? data : new Blob([data]);
+      const file = new File([blob], filename, { type: MIME[ext] || blob.type || 'application/octet-stream' });
+      const isImg = /^(jpe?g|png|webp)$/.test(ext);
+      return new Promise((resolve, reject) => {
+        sheetOpen = true;
+        const sh = document.getElementById('saveSheet');
+        document.getElementById('ssTitle').textContent = isImg ? 'Obraz gotowy' : 'Plik gotowy';
+        document.getElementById('ssName').textContent = filename;
+        document.getElementById('ssHint').textContent = mb(file.size) + ' · ' + (isImg ? 'w oknie, które się otworzy: Save Image (Zdjęcia) albo Save to Files (Pliki)' : 'w oknie, które się otworzy: Save to Files');
+        sh.classList.add('on');
+        const done = () => { sheetOpen = false; sh.classList.remove('on'); ok.onclick = null; cancel.onclick = null; };
+        const ok = document.getElementById('ssOk'), cancel = document.getElementById('ssCancel');
+        cancel.onclick = () => { done(); reject(err('declined')); };
+        ok.onclick = () => {
+          done();
+          let canShare = false;
+          try { canShare = !!(navigator.canShare && navigator.canShare({ files: [file] })); } catch (_) { }
+          if (canShare) {
+            navigator.share({ files: [file] }).then(
+              () => resolve({ status: 'saved' }),
+              e => reject(err(e && e.name === 'AbortError' ? 'declined' : 'unavailable', e && e.message)));
+            return;
+          }
+          try {
+            const u = URL.createObjectURL(file); const a = document.createElement('a');
+            a.href = u; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
+            setTimeout(() => URL.revokeObjectURL(u), 60000);
+            resolve({ status: 'saved' });
+          } catch (e) { reject(err('unavailable', e && e.message)); }
+        };
+      });
+    }
+  };
+
+  const idbP = openDb();
+  idbP.catch(() => { });
+  const dbP = idbP.then(async idb => { const mem = {}; for (const c of COLLS) mem[c] = await loadAll(idb, c); return makeDb(idb, mem); }).catch(() => null);
+  const assetsP = idbP.then(makeAssets).catch(() => null);
+  try { navigator.storage && navigator.storage.persist && navigator.storage.persist().catch(() => { }); } catch (_) { }
+
+  // adresy /_blob/ID czytane z pamięci lokalnej
+  const origFetch = window.fetch ? window.fetch.bind(window) : null;
+  window.fetch = async (input, init) => {
+    const url = typeof input === 'string' ? input : input && input.url;
+    if (url && url.startsWith('/_blob/')) {
+      const a = await assetsP; const b = a && await a.get(url.slice(7));
+      return b ? new Response(b, { status: 200 }) : new Response(null, { status: 404 });
+    }
+    return origFetch(input, init);
+  };
+
+  const impl = { db: dbP, assets: assetsP, downloads: Promise.resolve(downloads) };
+  window.claude = { use: n => impl[n] || Promise.resolve(null) };
+})();
+</script>
+
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+
+  // ---------------- stałe ----------------
+  const MAX_PX = 16777216;              // limit powierzchni canvasu w Safari na iOS
+  const PREVIEW_MAX = 1400;             // dłuższy bok podglądu rozmycia
+  const THUMB_W = 220;                  // szerokość miniatury zapisywanej w danych
+  const ASSET_MAX = 200 * 1024 * 1024;  // limit pojedynczego pliku w pamięci telefonu
+  const CHUNK_BYTES = 350 * 1024 * 1024;// powyżej tego paczka dzieli się na części
+  const PREFIX = 'RF', ROOT = 'ReadyFlow', FORMAT = 'Phone';
+  const SLOTS = { lock: 'Lock', home: 'Home' };
+  const DEF_BLUR = { amount: 40, dim: 0 };
+
+  // ---------------- narzędzia ----------------
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const pad3 = n => String(n).padStart(3, '0');
+  const genId = p => p + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  const mb = b => (b / 1048576).toFixed(b > 10485760 ? 0 : 1).replace('.', ',') + ' MB';
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const PL = { 'ą': 'a', 'ć': 'c', 'ę': 'e', 'ł': 'l', 'ń': 'n', 'ó': 'o', 'ś': 's', 'ź': 'z', 'ż': 'z', 'Ą': 'A', 'Ć': 'C', 'Ę': 'E', 'Ł': 'L', 'Ń': 'N', 'Ó': 'O', 'Ś': 'S', 'Ź': 'Z', 'Ż': 'Z' };
+  const ascii = s => String(s || '').replace(/[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/g, c => PL[c]).normalize('NFD').replace(/[̀-ͯ]/g, '');
+  // paczka: "night shift" -> "NightShift"
+  const packToken = s => ascii(s).replace(/[^A-Za-z0-9]+/g, ' ').trim().split(/\s+/).filter(Boolean).map(w => w[0].toUpperCase() + w.slice(1)).join('');
+  // auto i ujęcie: "Silvia S12" -> "Silvia-S12"
+  const partToken = s => ascii(s).replace(/[^A-Za-z0-9-]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+  const same = (a, b) => partToken(a).toLowerCase() === partToken(b).toLowerCase();
+
+  function fileName(pack, set, variant, ext, over) {
+    const car = partToken(over ? over.car : set.car) || 'BRAK-AUTA';
+    const shot = partToken(over ? over.shot : set.shot) || 'BRAK-UJECIA';
+    return `${PREFIX}_${pack.token}_${pad3(set.no)}_${car}_${shot}_${FORMAT}_${variant}.${ext}`;
+  }
+  const zipPath = (pack, variant, name) => `${ROOT}/${pack.token}/${FORMAT}/${variant}/${name}`;
+  const extOf = t => t === 'image/png' ? 'png' : t === 'image/webp' ? 'webp' : 'jpg';
+
+  const toast = (t, ms = 3200) => { const el = $('toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('on'), ms); };
+  const setBusy = (on, t, sub) => { $('busyTxt').textContent = t || 'Pracuję…'; $('busySub').textContent = sub || ''; $('busy').classList.toggle('on', !!on); };
+  const paintRange = el => el.style.setProperty('--p', ((el.value - el.min) / (el.max - el.min) * 100) + '%');
+
+  // ---------------- okna dialogowe ----------------
+  let dlgResolve = null;
+  function closeDlg(v) { $('dlg').classList.remove('on'); const r = dlgResolve; dlgResolve = null; if (r) r(v); }
+  function ask({ title, text, html, buttons, guard }) {
+    if (dlgResolve) closeDlg(undefined);
+    const box = $('dlgBox');
+    box.innerHTML = `<h3>${esc(title)}</h3>${text ? `<div class="txt">${esc(text)}</div>` : ''}${html || ''}<div class="dlgbtns">${
+      buttons.map((b, i) => b.file
+        ? `<label class="btn ${b.kind || ''}" for="fileIn" data-pick="${b.file}" data-i="${i}">${esc(b.label)}</label>`
+        : `<button class="btn ${b.kind || ''}" data-i="${i}">${esc(b.label)}</button>`).join('')}</div>`;
+    $('dlg').classList.add('on');
+    return new Promise(res => {
+      dlgResolve = res;
+      box.querySelectorAll('[data-i]').forEach(el => el.addEventListener('click', () => {
+        const b = buttons[+el.dataset.i];
+        if (b.file) { setTimeout(() => closeDlg('file'), 0); return; }
+        if (guard && !guard(b.value)) return;
+        closeDlg(b.value);
+      }));
+    });
+  }
+  $('dlg').addEventListener('click', e => { if (e.target === $('dlg')) closeDlg(null); });
+
+  // formularz z polami, podpowiedzią na żywo i walidacją
+  function askFields({ title, text, fields, hint, validate, ok }) {
+    const html = fields.map(f => `<div class="field"><span class="lbl">${esc(f.label)}</span>
+      <input class="text" data-k="${f.key}" type="text" value="${esc(f.value || '')}" placeholder="${esc(f.placeholder || '')}"
+      autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"></div>`).join('') +
+      `<div class="mono" id="dlgHint" style="color:var(--mut)"></div><div class="err" id="dlgErr"></div>`;
+    const box = $('dlgBox');
+    const read = () => { const v = {}; box.querySelectorAll('[data-k]').forEach(i => v[i.dataset.k] = i.value.trim()); return v; };
+    let result = null;
+    const guard = val => {
+      if (val !== 'ok') return true;
+      const v = read(); const e = validate ? validate(v) : '';
+      if (e) { $('dlgErr').textContent = e; return false; }
+      result = v; return true;
+    };
+    const p = ask({ title, text, html, guard, buttons: [{ label: ok || 'Zapisz', value: 'ok', kind: 'pri' }, { label: 'Anuluj', value: null }] });
+    const refresh = () => { const v = read(); $('dlgHint').innerHTML = hint ? hint(v) : ''; $('dlgErr').textContent = ''; };
+    box.querySelectorAll('[data-k]').forEach(i => {
+      i.addEventListener('input', refresh);
+      i.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); if (guard('ok')) closeDlg('ok'); } });
+    });
+    refresh();
+    const first = box.querySelector('[data-k]'); if (first) setTimeout(() => first.focus(), 60);
+    return p.then(r => r === 'ok' ? result : null);
+  }
+
+  // ---------------- podgląd pełnoekranowy ----------------
+  let ovUrl = null;
+  function openView(src, cap) { $('ovImg').src = src; $('ovCap').textContent = cap || ''; $('ov').classList.add('on'); }
+  $('ovClose').addEventListener('click', () => { $('ov').classList.remove('on'); $('ovImg').removeAttribute('src'); if (ovUrl) { URL.revokeObjectURL(ovUrl); ovUrl = null; } });
+
+  // ---------------- rozmycie w workerze (3 przejścia box blur ≈ gaussian, krawędzie powielane) ----------------
+  const workerSrc = `
+    self.onmessage = e => {
+      const { id, w, h, buf, sigma, dim } = e.data;
+      const a = new Uint8ClampedArray(buf);
+      if (sigma > 0.3) blur(a, w, h, sigma);
+      const f = 1 - (dim || 0) / 100;
+      for (let i = 0; i < a.length; i += 4) {
+        if (f < 1) { a[i] *= f; a[i + 1] *= f; a[i + 2] *= f; }
+        a[i + 3] = 255;
+      }
+      self.postMessage({ id, buf: a.buffer }, [a.buffer]);
+    };
+    function boxes(sigma, n) {
+      const wIdeal = Math.sqrt(12 * sigma * sigma / n + 1);
+      let wl = Math.floor(wIdeal); if (wl % 2 === 0) wl--;
+      const wu = wl + 2;
+      const m = Math.round((12 * sigma * sigma - n * wl * wl - 4 * n * wl - 3 * n) / (-4 * wl - 4));
+      const out = []; for (let i = 0; i < n; i++) out.push(i < m ? wl : wu); return out;
+    }
+    function blur(a, w, h, sigma) {
+      const tmp = new Uint8ClampedArray(a.length);
+      for (const size of boxes(sigma, 3)) {
+        const r = (size - 1) >> 1; if (r < 1) continue;
+        boxH(a, tmp, w, h, r); boxV(tmp, a, w, h, r);
+      }
+    }
+    function boxH(s, d, w, h, r) {
+      const inv = 1 / (2 * r + 1), last = w - 1;
+      for (let y = 0; y < h; y++) {
+        const row = y * w * 4;
+        for (let c = 0; c < 3; c++) {
+          const o = row + c;
+          let sum = s[o] * (r + 1);
+          for (let x = 1; x <= r; x++) sum += s[o + (x < last ? x : last) * 4];
+          for (let x = 0; x < w; x++) {
+            d[o + x * 4] = sum * inv;
+            const add = x + r + 1, sub = x - r;
+            sum += s[o + (add < last ? add : last) * 4] - s[o + (sub > 0 ? sub : 0) * 4];
+          }
+        }
+      }
+    }
+    function boxV(s, d, w, h, r) {
+      const inv = 1 / (2 * r + 1), last = h - 1, st = w * 4;
+      for (let x = 0; x < w; x++) {
+        for (let c = 0; c < 3; c++) {
+          const o = x * 4 + c;
+          let sum = s[o] * (r + 1);
+          for (let y = 1; y <= r; y++) sum += s[o + (y < last ? y : last) * st];
+          for (let y = 0; y < h; y++) {
+            d[o + y * st] = sum * inv;
+            const add = y + r + 1, sub = y - r;
+            sum += s[o + (add < last ? add : last) * st] - s[o + (sub > 0 ? sub : 0) * st];
+          }
+        }
+      }
+    }`;
+  const worker = new Worker(URL.createObjectURL(new Blob([workerSrc], { type: 'text/javascript' })));
+  let jobId = 0; const jobs = new Map();
+  worker.onmessage = e => { const cb = jobs.get(e.data.id); jobs.delete(e.data.id); cb && cb(e.data.buf); };
+  const runBlur = (data, w, h, sigma, dim) => new Promise(res => {
+    const id = ++jobId; jobs.set(id, res);
+    worker.postMessage({ id, w, h, buf: data.buffer, sigma, dim }, [data.buffer]);
+  });
+  // siła 0–100 → sigma proporcjonalna do rozmiaru obrazu, więc podgląd i miniatura wyglądają jak plik końcowy
+  const sigmaFor = (w, h, amount) => Math.max(w, h) * 0.04 * Math.pow((amount || 0) / 100, 1.6);
+
+  // ---------------- obrazy ----------------
+  function loadImg(src) {
+    return new Promise((res, rej) => {
+      const url = src instanceof Blob ? URL.createObjectURL(src) : src;
+      const im = new Image();
+      im.onload = () => { if (src instanceof Blob) URL.revokeObjectURL(url); res(im); };
+      im.onerror = () => { if (src instanceof Blob) URL.revokeObjectURL(url); rej(new Error('decode')); };
+      im.src = url;
+    });
+  }
+  const canvasBlob = (c, type, q) => new Promise((res, rej) => c.toBlob(b => b ? res(b) : rej(new Error('toBlob')), type, q));
+  function fitMax(w, h) { const s = Math.min(1, Math.sqrt(MAX_PX / (w * h))); return { w: Math.floor(w * s), h: Math.floor(h * s), scaled: s < 1 }; }
+  function makeThumb(im) {
+    const w = im.naturalWidth, h = im.naturalHeight;
+    const c = document.createElement('canvas'); c.width = THUMB_W; c.height = Math.max(1, Math.round(h * THUMB_W / w));
+    const x = c.getContext('2d'); x.fillStyle = '#000'; x.fillRect(0, 0, c.width, c.height); x.drawImage(im, 0, 0, c.width, c.height);
+    return c.toDataURL('image/jpeg', 0.72);
+  }
+  async function reencodeJpg(im) {
+    const f = fitMax(im.naturalWidth, im.naturalHeight);
+    const c = document.createElement('canvas'); c.width = f.w; c.height = f.h;
+    const x = c.getContext('2d'); x.fillStyle = '#000'; x.fillRect(0, 0, f.w, f.h); x.drawImage(im, 0, 0, f.w, f.h);
+    const b = await canvasBlob(c, 'image/jpeg', 0.95); c.width = c.height = 0; return b;
+  }
+  async function hashBuf(buf) {
+    try {
+      const d = await crypto.subtle.digest('SHA-256', buf);
+      return [...new Uint8Array(d)].slice(0, 16).map(b => b.toString(16).padStart(2, '0')).join('');
+    } catch (_) { return null; }
+  }
+  // pełna rozdzielczość Blur z pliku Lock
+  async function renderBlurFull(lockBlob, blur) {
+    const im = await loadImg(lockBlob);
+    const f = fitMax(im.naturalWidth, im.naturalHeight);
+    const c = document.createElement('canvas'); c.width = f.w; c.height = f.h;
+    const x = c.getContext('2d', { willReadFrequently: true });
+    x.fillStyle = '#000'; x.fillRect(0, 0, f.w, f.h); x.drawImage(im, 0, 0, f.w, f.h);
+    const d = x.getImageData(0, 0, f.w, f.h);
+    const buf = await runBlur(d.data, f.w, f.h, sigmaFor(f.w, f.h, blur.amount), blur.dim);
+    x.putImageData(new ImageData(new Uint8ClampedArray(buf), f.w, f.h), 0, 0);
+    const b = await canvasBlob(c, 'image/jpeg', 0.95);
+    c.width = c.height = 0;
+    return { blob: b, scaled: f.scaled, w: f.w, h: f.h };
+  }
+  // miniatura Blur liczona z miniatury Lock
+  const thumbCache = new Map();
+  async function blurThumb(set) {
+    const l = set.lock; if (!l || !l.thumb) return null;
+    const b = set.blur || DEF_BLUR;
+    const key = `${l.sig || l.asset || set.id}|${b.amount}|${b.dim}`;
+    if (thumbCache.has(key)) return thumbCache.get(key);
+    const im = await loadImg(l.thumb);
+    const c = document.createElement('canvas'); c.width = im.naturalWidth; c.height = im.naturalHeight;
+    const x = c.getContext('2d', { willReadFrequently: true }); x.drawImage(im, 0, 0);
+    const d = x.getImageData(0, 0, c.width, c.height);
+    const buf = await runBlur(d.data, c.width, c.height, sigmaFor(c.width, c.height, b.amount), b.dim);
+    x.putImageData(new ImageData(new Uint8ClampedArray(buf), c.width, c.height), 0, 0);
+    const url = c.toDataURL('image/jpeg', 0.8);
+    thumbCache.set(key, url);
+    return url;
+  }
+  function fillBlurThumbs(root) {
+    root.querySelectorAll('img[data-blurfor]').forEach(img => {
+      const s = state.sets.find(x => x.id === img.dataset.blurfor);
+      if (s) blurThumb(s).then(u => { if (u) img.src = u; }).catch(() => {});
+    });
+  }
+
+  // ---------------- ZIP (bez kompresji: JPG/PNG i tak są skompresowane) ----------------
+  const CRC_T = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+  function crc32(u8) { let c = 0xFFFFFFFF; for (let i = 0; i < u8.length; i++) c = CRC_T[(c ^ u8[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+  function dosTime(d) { return { time: (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1), date: ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate() }; }
+  class Zip {
+    constructor() { this.parts = []; this.central = []; this.offset = 0; this.count = 0; this.cdSize = 0; }
+    add(name, u8) {
+      const nb = new TextEncoder().encode(name), crc = crc32(u8), { time, date } = dosTime(new Date());
+      const h = new DataView(new ArrayBuffer(30));
+      h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true); h.setUint16(8, 0, true);
+      h.setUint16(10, time, true); h.setUint16(12, date, true); h.setUint32(14, crc, true);
+      h.setUint32(18, u8.length, true); h.setUint32(22, u8.length, true); h.setUint16(26, nb.length, true); h.setUint16(28, 0, true);
+      this.parts.push(h.buffer, nb, new Blob([u8]));
+      const c = new DataView(new ArrayBuffer(46));
+      c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true); c.setUint16(10, 0, true);
+      c.setUint16(12, time, true); c.setUint16(14, date, true); c.setUint32(16, crc, true);
+      c.setUint32(20, u8.length, true); c.setUint32(24, u8.length, true); c.setUint16(28, nb.length, true);
+      c.setUint16(30, 0, true); c.setUint16(32, 0, true); c.setUint16(34, 0, true); c.setUint16(36, 0, true); c.setUint32(38, 0, true);
+      c.setUint32(42, this.offset, true);
+      this.central.push(c.buffer, nb);
+      this.cdSize += 46 + nb.length;
+      this.offset += 30 + nb.length + u8.length;
+      this.count++;
+    }
+    blob() {
+      const e = new DataView(new ArrayBuffer(22));
+      e.setUint32(0, 0x06054b50, true); e.setUint16(4, 0, true); e.setUint16(6, 0, true);
+      e.setUint16(8, this.count, true); e.setUint16(10, this.count, true);
+      e.setUint32(12, this.cdSize, true); e.setUint32(16, this.offset, true); e.setUint16(20, 0, true);
+      return new Blob([...this.parts, ...this.central, e.buffer], { type: 'application/zip' });
+    }
+  }
+
+  // ---------------- stan ----------------
+  const state = {
+    booting: true, db: null, assets: null, downloads: null,
+    packs: [], packsReady: false, packsErr: null, packsSlow: false,
+    packId: null, sets: [], setsReady: false, unsubSets: null, filter: 'all',
+    edId: null, pickSlot: null
+  };
+  const blobCache = new Map();     // assetId -> Blob (wczytane w tej sesji)
+  const sessionFiles = new Map();  // setId:slot -> Blob (pliki za duże do zapisu)
+  const curPack = () => state.packs.find(p => p.id === state.packId) || null;
+  const curSet = () => state.sets.find(s => s.id === state.edId) || null;
+  const sKey = (id, slot) => id + ':' + slot;
+  const avail = (s, slot) => { const d = s[slot]; return !!(d && (d.asset || (d.session && sessionFiles.has(sKey(s.id, slot))))); };
+
+  async function blobFor(s, slot, keep) {
+    const d = s[slot]; if (!d) throw new Error('missing');
+    if (d.session) { const b = sessionFiles.get(sKey(s.id, slot)); if (!b) throw new Error('missing'); return b; }
+    if (blobCache.has(d.asset)) return blobCache.get(d.asset);
+    const r = await fetch('/_blob/' + d.asset);
+    if (!r.ok) throw new Error('fetch ' + r.status);
+    const b = await r.blob();
+    if (keep) blobCache.set(d.asset, b);
+    return b;
+  }
+
+  function statusOf(s, over) {
+    const car = over ? over.car : s.car, shot = over ? over.shot : s.shot;
+    const miss = [];
+    if (!partToken(car)) miss.push('nazwa auta');
+    if (!partToken(shot)) miss.push('nazwa ujęcia');
+    for (const k of ['lock', 'home']) if (!avail(s, k)) miss.push(s[k] && s[k].session ? `${SLOTS[k]} (plik z poprzedniej sesji zniknął)` : SLOTS[k]);
+    if (!avail(s, 'lock')) miss.push('Blur');
+    const warns = [];
+    const others = state.sets.filter(o => o.id !== s.id);
+    if (partToken(car) && partToken(shot)) {
+      const d = others.filter(o => same(o.car, car) && same(o.shot, shot));
+      if (d.length) warns.push(`To samo auto i ujęcie jest też w zestawie ${d.map(o => pad3(o.no)).join(', ')}`);
+    }
+    for (const k of ['lock', 'home']) {
+      const sig = s[k] && s[k].sig; if (!sig) continue;
+      const hits = [];
+      others.forEach(o => ['lock', 'home'].forEach(k2 => { if (o[k2] && o[k2].sig === sig) hits.push(`${pad3(o.no)} (${SLOTS[k2]})`); }));
+      if (hits.length) warns.push(`${SLOTS[k]}: ten sam plik jest też w zestawie ${hits.join(', ')}`);
+    }
+    if (s.lock && s.home && s.lock.sig && s.lock.sig === s.home.sig) warns.push('Lock i Home to ten sam plik');
+    if (s.lock && s.home && (s.lock.w !== s.home.w || s.lock.h !== s.home.h)) warns.push(`Różne wymiary: Lock ${s.lock.w}×${s.lock.h}, Home ${s.home.w}×${s.home.h}`);
+    if (s.lock && s.lock.w * s.lock.h > MAX_PX) { const f = fitMax(s.lock.w, s.lock.h); warns.push(`Lock ma ${(s.lock.w * s.lock.h / 1e6).toFixed(1)} Mpx, a Safari obrobi najwyżej 16,7 Mpx: Blur wyjdzie w ${f.w}×${f.h}`); }
+    return { miss, complete: miss.length === 0, warns };
+  }
+
+  // ---------------- zapis ----------------
+  async function dbw(p, what) {
+    try { await p; return true; }
+    catch (e) {
+      const code = e && e.code;
+      if (code === 'quota_exceeded') toast('Pamięć telefonu dla aplikacji jest pełna. Usuń niepotrzebne zestawy albo paczki.', 5000);
+      else toast(`Nie udało się zapisać${what ? ' (' + what + ')' : ''}. Spróbuj jeszcze raz.`, 4000);
+      return false;
+    }
+  }
+  let countsT = null;
+  function syncCounts() {
+    clearTimeout(countsT);
+    const pid = state.packId; if (!pid) return;
+    countsT = setTimeout(async () => {
+      try {
+        const snap = await state.db.collection('sets').where('packId', '==', pid).get();
+        const sets = snap.docs.map(d => Object.assign({ id: d.id }, d.data()));
+        const total = sets.length, complete = sets.filter(s => statusOf(s).complete).length;
+        const p = state.packs.find(x => x.id === pid);
+        if (p && (p.total !== total || p.complete !== complete)) await state.db.doc('packs/' + pid).update({ total, complete });
+      } catch (_) { }
+    }, 900);
+  }
+
+  // ---------------- widoki ----------------
+  function render() {
+    const app = $('app');
+    if (state.booting) { app.innerHTML = `<div class="empty">Ładuję…</div>`; return; }
+    if (!state.db) {
+      app.innerHTML = `<h1>Ready Flow</h1><div class="card"><div>Nie mogę otworzyć pamięci przeglądarki.</div><div class="hint">Aplikacja trzyma paczki i obrazy w pamięci Safari na tym telefonie. Nie działa w trybie prywatnym. Otwórz ją ze zwykłego Safari albo z ikony na ekranie głównym.</div></div>`;
+      return;
+    }
+    if (state.packId) return renderPack(app);
+    renderHome(app);
+  }
+
+  function renderHome(app) {
+    let body;
+    if (state.packsErr) body = `<div class="card err">Nie udało się wczytać paczek. Odśwież stronę.</div>`;
+    else if (!state.packsReady) body = `<div class="empty">${state.packsSlow ? 'Dane jeszcze nie dotarły.' : 'Wczytuję paczki…'}</div>`;
+    else if (!state.packs.length) body = `<div class="empty">Nie masz jeszcze żadnej paczki.<br>Zacznij od „Nowa paczka”.</div>`;
+    else body = [...state.packs].sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0)).map(p => {
+      const t = p.total || 0, c = p.complete || 0;
+      return `<button class="pack" data-pack="${esc(p.id)}">
+        <b>${esc(p.name)}</b>
+        <span class="mono" style="color:var(--mut)">${PREFIX}_${esc(p.token)}_…_${FORMAT}</span>
+        <div class="bar"><i style="width:${t ? c / t * 100 : 0}%"></i></div>
+        <div class="meta"><span>${t} ${t === 1 ? 'zestaw' : (t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 12 || t % 100 > 14)) ? 'zestawy' : 'zestawów'}</span><span>${c} kompletnych</span></div>
+      </button>`;
+    }).join('');
+    app.innerHTML = `
+      <div><h1>Ready Flow</h1><div class="sub">Paczki tapet: Lock, Home i Blur w jednym zestawie.</div></div>
+      <button class="btn pri" data-act="newPack">+ Nowa paczka</button>
+      ${body}`;
+  }
+
+  function renderPack(app) {
+    const p = curPack();
+    if (!p) {
+      app.innerHTML = `<div class="top"><button class="back" data-act="home">‹ Paczki</button></div>
+        <div class="empty">${state.packsReady ? 'Ta paczka nie istnieje albo została usunięta.' : 'Wczytuję…'}</div>`;
+      return;
+    }
+    const sets = state.sets;
+    const st = new Map(sets.map(s => [s.id, statusOf(s)]));
+    const complete = sets.filter(s => st.get(s.id).complete).length;
+    const inc = sets.length - complete;
+    const shown = state.filter === 'inc' ? sets.filter(s => !st.get(s.id).complete) : sets;
+    const cards = !state.setsReady ? `<div class="empty">Wczytuję zestawy…</div>`
+      : !sets.length ? `<div class="empty">Paczka jest pusta. Dodaj pierwszy zestaw.</div>`
+      : !shown.length ? `<div class="empty">Wszystkie zestawy są kompletne.</div>`
+      : shown.map(s => setCard(p, s, st.get(s.id))).join('');
+    app.innerHTML = `
+      <div class="top"><button class="back" data-act="home">‹ Paczki</button><button class="icon" data-act="packMenu" aria-label="Opcje paczki">⋯</button></div>
+      <div><h1>${esc(p.name)}</h1><div class="mono" style="color:var(--mut);margin-top:4px">${PREFIX}_${esc(p.token)}_###_auto_ujecie_${FORMAT}_wariant</div></div>
+      <div class="card" style="gap:8px">
+        <div class="row"><span class="lbl">Kompletne zestawy</span><span class="val">${complete}/${sets.length}</span></div>
+        <div class="bar"><i style="width:${sets.length ? complete / sets.length * 100 : 0}%"></i></div>
+      </div>
+      <div class="btns">
+        <button class="btn pri" data-act="addSet">+ Dodaj zestaw</button>
+        <button class="btn" data-act="exportPack" ${complete ? '' : 'disabled'}>Zapisz paczkę</button>
+      </div>
+      ${sets.length ? `<div class="seg" id="filter">
+        <button data-f="all" class="${state.filter === 'all' ? 'on' : ''}">Wszystkie (${sets.length})</button>
+        <button data-f="inc" class="${state.filter === 'inc' ? 'on' : ''}">Niekompletne (${inc})</button></div>` : ''}
+      ${cards}`;
+    fillBlurThumbs(app);
+  }
+
+  function tileHtml(s, slot, big) {
+    const d = s[slot];
+    if (slot === 'blur') {
+      if (!avail(s, 'lock')) return `<div class="tile ph off"><b>·</b><span>powstanie z Lock</span><span class="tag">Blur</span></div>`;
+      const b = s.blur || DEF_BLUR;
+      return `<div class="tile"><img data-blurfor="${esc(s.id)}" alt="Blur"><span class="tag">Blur · z Lock</span><span class="dims">siła ${b.amount}${b.dim ? ` · ciemniej ${b.dim}%` : ''}</span></div>`;
+    }
+    if (!avail(s, slot)) {
+      const gone = d && d.session;
+      if (big) return `<label class="tile ph" for="fileIn" data-pick="${slot}"><b>+</b><span>${gone ? 'plik zniknął,<br>wczytaj ponownie' : 'Dodaj ' + SLOTS[slot]}</span><span class="tag">${SLOTS[slot]}</span></label>`;
+      return `<div class="tile ph"><b>+</b><span>brak</span><span class="tag">${SLOTS[slot]}</span></div>`;
+    }
+    const inner = `<img src="${esc(d.thumb)}" alt="${SLOTS[slot]}"><span class="tag">${SLOTS[slot]}</span><span class="dims">${d.w}×${d.h}${d.session ? ' · sesja' : ''}</span>`;
+    return big ? `<button class="tile" data-ed="slot" data-slot="${slot}">${inner}</button>` : `<div class="tile">${inner}</div>`;
+  }
+
+  function setCard(p, s, st) {
+    return `<button class="set ${st.complete ? 'ok' : ''}" data-set="${esc(s.id)}">
+      <div class="sethead"><span class="no">${pad3(s.no)}</span>
+        <span class="st">${esc(partToken(s.car) || 'bez nazwy auta')} <i>· ${esc(partToken(s.shot) || 'bez ujęcia')}</i></span>
+        <span class="pill ${st.complete ? 'ok' : 'miss'}">${st.complete ? '✓ Kompletny' : 'Niekompletny'}</span></div>
+      <div class="trio">${tileHtml(s, 'lock')}${tileHtml(s, 'home')}${tileHtml(s, 'blur')}</div>
+      ${st.complete ? '' : `<div class="misses">Brakuje: ${esc(st.miss.join(', '))}</div>`}
+      ${st.warns.length ? `<div class="warns">${st.warns.map(w => `<div>${esc(w)}</div>`).join('')}</div>` : ''}
+    </button>`;
+  }
+
+  // ---------------- nawigacja ----------------
+  function route() {
+    const m = location.hash.slice(1).match(/^p-([A-Za-z0-9]+)$/);
+    if (m) openPack(m[1]); else openHome();
+  }
+  function stopSets() { if (state.unsubSets) { state.unsubSets(); state.unsubSets = null; } }
+  function openHome() {
+    closeEditor(); stopSets();
+    state.packId = null; state.sets = []; state.setsReady = false; blobCache.clear();
+    render(); window.scrollTo(0, 0);
+  }
+  function openPack(id) {
+    if (state.packId === id && state.unsubSets) { render(); return; }
+    closeEditor(); stopSets(); blobCache.clear();
+    state.packId = id; state.sets = []; state.setsReady = false; state.filter = 'all';
+    render(); window.scrollTo(0, 0);
+    if (!state.db) return;
+    state.unsubSets = state.db.collection('sets').where('packId', '==', id).onSnapshot(snap => {
+      if (state.packId !== id) return;
+      state.sets = snap.docs.map(d => Object.assign({ id: d.id }, d.data())).sort((a, b) => (a.no || 0) - (b.no || 0));
+      state.setsReady = true;
+      render();
+      if (state.edId) updateEditor();
+    }, () => { state.setsReady = true; toast('Nie udało się wczytać zestawów. Odśwież stronę.', 5000); render(); });
+  }
+  window.addEventListener('hashchange', route);
+
+  // ---------------- akcje: paczki ----------------
+  const packHint = v => { const t = packToken(v.name); return t ? `W nazwach plików: ${PREFIX}_${esc(t)}_001_…` : ''; };
+  function packValidate(v, selfId) {
+    const t = packToken(v.name);
+    if (!t) return 'Wpisz nazwę paczki (litery lub cyfry).';
+    const d = state.packs.find(p => p.id !== selfId && p.token.toLowerCase() === t.toLowerCase());
+    if (d) return `Paczka „${d.name}” ma już tę nazwę w plikach (${t}). Wybierz inną.`;
+    return '';
+  }
+  async function newPack() {
+    const v = await askFields({ title: 'Nowa paczka', fields: [{ key: 'name', label: 'Nazwa paczki', placeholder: 'Night Shift' }], hint: packHint, validate: v => packValidate(v), ok: 'Utwórz' });
+    if (!v) return;
+    const id = genId('p');
+    const ok = await dbw(state.db.doc('packs/' + id).set({ name: v.name, token: packToken(v.name), format: FORMAT, nextNo: 1, total: 0, complete: 0, blur: Object.assign({}, DEF_BLUR), createdAt: Date.now() }), 'paczka');
+    if (ok) location.hash = 'p-' + id;
+  }
+  async function packMenu() {
+    const p = curPack(); if (!p) return;
+    const r = await ask({ title: p.name, buttons: [
+      { label: 'Zmień nazwę paczki', value: 'rename' },
+      { label: 'Usuń paczkę', value: 'delete', kind: 'danger' },
+      { label: 'Anuluj', value: null }] });
+    if (r === 'rename') {
+      const v = await askFields({ title: 'Nazwa paczki', text: 'Zmiana nazwy zmieni nazwy wszystkich plików w tej paczce przy następnym eksporcie.', fields: [{ key: 'name', label: 'Nazwa paczki', value: p.name }], hint: packHint, validate: v => packValidate(v, p.id) });
+      if (v) await dbw(state.db.doc('packs/' + p.id).update({ name: v.name, token: packToken(v.name) }), 'nazwa');
+    } else if (r === 'delete') {
+      const n = state.sets.length;
+      const c = await ask({ title: `Usunąć paczkę „${p.name}”?`, text: `Zniknie ${n} ${n === 1 ? 'zestaw' : 'zestawów'} razem z zapisanymi obrazami. Tego nie da się cofnąć.`, buttons: [{ label: 'Usuń paczkę', value: true, kind: 'danger' }, { label: 'Anuluj', value: false }] });
+      if (!c) return;
+      setBusy(true, 'Usuwam paczkę…');
+      try {
+        for (const s of [...state.sets]) await deleteSetData(s);
+        await state.db.doc('packs/' + p.id).delete();
+        location.hash = '';
+      } catch (_) { toast('Nie udało się usunąć wszystkiego. Spróbuj jeszcze raz.'); }
+      finally { setBusy(false); }
+    }
+  }
+
+  // ---------------- akcje: zestawy ----------------
+  async function addSet() {
+    const p = curPack(); if (!p) return;
+    const last = state.sets[state.sets.length - 1];
+    const maxNo = state.sets.reduce((m, s) => Math.max(m, s.no || 0), 0);
+    const no = Math.max(p.nextNo || 1, maxNo + 1);
+    const v = await askFields({
+      title: `Nowy zestaw ${pad3(no)}`,
+      fields: [{ key: 'car', label: 'Model auta', value: last ? last.car : '', placeholder: 'Silvia S12' }, { key: 'shot', label: 'Nazwa ujęcia', placeholder: 'Laundromat' }],
+      hint: v => {
+        const n = fileName(p, { no, car: v.car, shot: v.shot }, 'Lock', 'jpg');
+        const d = state.sets.filter(s => partToken(v.car) && partToken(v.shot) && same(s.car, v.car) && same(s.shot, v.shot));
+        return esc(n) + (d.length ? `<div class="note" style="font-family:inherit;margin-top:6px">To auto i ujęcie jest już w zestawie ${d.map(s => pad3(s.no)).join(', ')}.</div>` : '');
+      },
+      validate: v => !partToken(v.car) ? 'Wpisz model auta.' : !partToken(v.shot) ? 'Wpisz nazwę ujęcia.' : '',
+      ok: 'Dodaj zestaw'
+    });
+    if (!v) return;
+    const id = genId('s');
+    const data = { packId: p.id, no, car: v.car, shot: v.shot, lock: null, home: null, blur: Object.assign({}, p.blur || DEF_BLUR), createdAt: Date.now(), updatedAt: Date.now() };
+    if (!await dbw(state.db.doc('sets/' + id).set(data), 'zestaw')) return;
+    await dbw(state.db.doc('packs/' + p.id).update({ nextNo: no + 1 }), 'numer');
+    if (!state.sets.find(s => s.id === id)) { state.sets.push(Object.assign({ id }, data)); state.sets.sort((a, b) => a.no - b.no); render(); }
+    syncCounts();
+    openEditor(id);
+  }
+
+  async function deleteSetData(s) {
+    await state.db.doc('sets/' + s.id).delete();
+    for (const k of ['lock', 'home']) {
+      sessionFiles.delete(sKey(s.id, k));
+      if (s[k] && s[k].asset && state.assets) { blobCache.delete(s[k].asset); try { await state.assets.delete(s[k].asset); } catch (_) { } }
+    }
+  }
+
+  // ---------------- edytor zestawu ----------------
+  const ed = {
+    local: null,      // { car, shot, amount, dim }
+    touchT: 0,        // ostatni ruch suwakiem
+    saveT: null, blurT: null,
+    lockKey: null, orig: null, last: null, pW: 0, pH: 0, busy: false, pending: false, holding: false, token: 0
+  };
+
+  function openEditor(id) {
+    const s = state.sets.find(x => x.id === id); const p = curPack(); if (!s || !p) return;
+    state.edId = id;
+    const b = s.blur || DEF_BLUR;
+    ed.local = { car: s.car || '', shot: s.shot || '', amount: b.amount, dim: b.dim };
+    ed.lockKey = null; ed.orig = null; ed.last = null;
+    const el = $('ed');
+    el.innerHTML = `<div class="wrap">
+      <div class="top"><button class="back" data-ed="close">‹ ${esc(p.name)}</button><span class="no" id="edNo" style="font-size:15px"></span></div>
+      <div class="card">
+        <div class="field"><span class="lbl">Model auta</span><input class="text" id="edCar" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"></div>
+        <div class="field"><span class="lbl">Nazwa ujęcia</span><input class="text" id="edShot" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"></div>
+      </div>
+      <div id="edStatus"></div>
+      <div class="trio" id="edTrio"></div>
+      <div class="card" id="blurCard">
+        <div class="row"><span class="lbl" style="color:var(--txt);font-weight:600">Blur z obrazu Lock</span><span class="hint" id="blurRes"></span></div>
+        <div class="stage" id="stage"><canvas id="cv"></canvas><div class="badge" id="badge">Lock bez rozmycia</div></div>
+        <div class="hint">Przytrzymaj palec na obrazie, żeby porównać z Lock.</div>
+        <div><div class="row"><span class="lbl">Siła rozmycia</span><span class="val" id="amtVal"></span></div>
+          <input type="range" id="amt" min="0" max="100" step="1"></div>
+        <div><div class="row"><span class="lbl">Przyciemnienie</span><span class="val" id="dimVal"></span></div>
+          <input type="range" id="dim" min="0" max="70" step="1"></div>
+        <div class="links">
+          <button class="link" data-ed="blurDefault">Ustaw jako domyślne dla nowych zestawów</button>
+          <button class="link" data-ed="blurAll">Zastosuj do wszystkich zestawów w paczce</button>
+        </div>
+      </div>
+      <div class="card" id="blurEmpty"><div class="hint">Dodaj obraz Lock, a Blur powstanie z niego automatycznie.</div></div>
+      <div class="card"><span class="lbl">Nazwy plików</span><div class="names" id="edNames"></div>
+        <div class="hint">Lock i Home trafiają do paczki bez zmian, w oryginalnej rozdzielczości. Blur zapisuje się jako JPG. „Zapisz osobno” otwiera okno zapisu po kolei dla każdego pliku, więc każdy zapiszesz tam, gdzie chcesz.</div></div>
+      <div class="btns">
+        <button class="btn pri" data-ed="exportFiles">Zapisz osobno</button>
+        <button class="btn" data-ed="export">Zapisz jako ZIP</button>
+        <button class="btn danger full" data-ed="delete">Usuń zestaw</button>
+      </div>
+    </div>`;
+    el.classList.add('on'); el.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+
+    const car = $('edCar'), shot = $('edShot');
+    car.value = ed.local.car; shot.value = ed.local.shot;
+    const onName = () => { ed.local.car = car.value; ed.local.shot = shot.value; updateEditor(); scheduleNameSave(); };
+    car.addEventListener('input', onName); shot.addEventListener('input', onName);
+    [car, shot].forEach(i => i.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); i.blur(); } }));
+    [car, shot].forEach(i => i.addEventListener('blur', flushNameSave));
+
+    const amt = $('amt'), dim = $('dim');
+    amt.value = ed.local.amount; dim.value = ed.local.dim;
+    const onBlur = () => {
+      ed.local.amount = +amt.value; ed.local.dim = +dim.value; ed.touchT = Date.now();
+      showBlurVals(); renderPreview(); scheduleBlurSave();
+    };
+    amt.addEventListener('input', onBlur); dim.addEventListener('input', onBlur);
+    showBlurVals();
+
+    const stage = $('stage');
+    stage.addEventListener('pointerdown', e => { e.preventDefault(); showOrig(true); });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(t => stage.addEventListener(t, () => ed.holding && showOrig(false)));
+    stage.addEventListener('contextmenu', e => e.preventDefault());
+
+    updateEditor();
+  }
+
+  function showBlurVals() {
+    $('amtVal').textContent = ed.local.amount; $('dimVal').textContent = ed.local.dim + '%';
+    paintRange($('amt')); paintRange($('dim'));
+  }
+
+  function closeEditor() {
+    if (!state.edId) return;
+    flushNameSave(); flushBlurSave();
+    state.edId = null; ed.token++;
+    $('ed').classList.remove('on'); $('ed').innerHTML = '';
+    document.body.style.overflow = '';
+    render();
+  }
+
+  function updateEditor() {
+    const s = curSet(), p = curPack();
+    if (!s || !p) { if (state.setsReady) closeEditor(); return; }
+    // pola tekstowe: nie nadpisuję tego, co właśnie piszesz
+    const car = $('edCar'), shot = $('edShot');
+    if (document.activeElement !== car && document.activeElement !== shot && !ed.saveT) {
+      ed.local.car = s.car || ''; ed.local.shot = s.shot || '';
+      if (car.value !== ed.local.car) car.value = ed.local.car;
+      if (shot.value !== ed.local.shot) shot.value = ed.local.shot;
+    }
+    const b = s.blur || DEF_BLUR;
+    if (Date.now() - ed.touchT > 1500 && !ed.blurT && (b.amount !== ed.local.amount || b.dim !== ed.local.dim)) {
+      ed.local.amount = b.amount; ed.local.dim = b.dim; $('amt').value = b.amount; $('dim').value = b.dim; showBlurVals(); renderPreview();
+    }
+    $('edNo').textContent = 'Zestaw ' + pad3(s.no);
+
+    const st = statusOf(s, ed.local);
+    $('edStatus').innerHTML = `<div class="card" style="gap:6px">
+      <div class="row"><span class="pill ${st.complete ? 'ok' : 'miss'}">${st.complete ? '✓ Kompletny' : 'Niekompletny'}</span></div>
+      ${st.complete ? '' : `<div class="misses">Brakuje: ${esc(st.miss.join(', '))}</div>`}
+      ${st.warns.length ? `<div class="warns">${st.warns.map(w => `<div>${esc(w)}</div>`).join('')}</div>` : ''}
+    </div>`;
+
+    // trzy warianty obok siebie (Blur liczony z bieżących ustawień suwaków)
+    const view = Object.assign({}, s, { blur: { amount: ed.local.amount, dim: ed.local.dim } });
+    $('edTrio').innerHTML = tileHtml(view, 'lock', true) + tileHtml(view, 'home', true) +
+      (avail(s, 'lock') ? `<button class="tile" data-ed="viewBlur"><img id="edBlurImg" alt="Blur"><span class="tag">Blur · z Lock</span></button>` : tileHtml(view, 'blur', true));
+    paintEdBlurTile();
+
+    const hasLock = avail(s, 'lock');
+    $('blurCard').classList.toggle('hidden', !hasLock);
+    $('blurEmpty').classList.toggle('hidden', hasLock);
+
+    const rows = [
+      ['Lock', avail(s, 'lock') ? fileName(p, s, 'Lock', s.lock.ext, ed.local) : fileName(p, s, 'Lock', 'jpg', ed.local), avail(s, 'lock')],
+      ['Home', avail(s, 'home') ? fileName(p, s, 'Home', s.home.ext, ed.local) : fileName(p, s, 'Home', 'jpg', ed.local), avail(s, 'home')],
+      ['Blur', fileName(p, s, 'Blur', 'jpg', ed.local), hasLock]
+    ];
+    $('edNames').innerHTML = rows.map(r => `<div><span class="v">${r[0]}</span><span class="mono ${r[2] ? '' : 'miss'}">${esc(r[1])}</span></div>`).join('');
+
+    if (hasLock) {
+      const f = fitMax(s.lock.w, s.lock.h);
+      $('blurRes').textContent = `${f.w}×${f.h}`;
+      const key = s.lock.asset || sKey(s.id, 'lock') + (s.lock.sig || '');
+      if (ed.lockKey !== key) { ed.lockKey = key; loadPreview(s); }
+    } else { ed.lockKey = null; ed.orig = null; }
+  }
+
+  function paintEdBlurTile() {
+    const img = $('edBlurImg'); if (!img) return;
+    if (ed.last) { img.src = cvSnapshot(); return; }
+    const s = curSet(); if (!s) return;
+    blurThumb(Object.assign({}, s, { blur: { amount: ed.local.amount, dim: ed.local.dim } })).then(u => { if (u && !ed.last && $('edBlurImg')) $('edBlurImg').src = u; }).catch(() => {});
+  }
+  let snapT = 0, snapUrl = '';
+  function cvSnapshot() {
+    // mała kopia podglądu do kafelka (odświeżana najwyżej co 250 ms)
+    const now = Date.now();
+    if (snapUrl && now - snapT < 250) return snapUrl;
+    const c = document.createElement('canvas'); c.width = THUMB_W; c.height = Math.round(ed.pH * THUMB_W / ed.pW);
+    const x = c.getContext('2d'); const t = document.createElement('canvas'); t.width = ed.pW; t.height = ed.pH;
+    t.getContext('2d').putImageData(ed.last, 0, 0); x.drawImage(t, 0, 0, c.width, c.height);
+    snapUrl = c.toDataURL('image/jpeg', 0.8); snapT = now; return snapUrl;
+  }
+
+  async function loadPreview(s) {
+    const tok = ++ed.token;
+    ed.orig = null; ed.last = null;
+    try {
+      const blob = await blobFor(s, 'lock', true);
+      const im = await loadImg(blob);
+      if (tok !== ed.token) return;
+      const ps = Math.min(1, PREVIEW_MAX / Math.max(im.naturalWidth, im.naturalHeight));
+      ed.pW = Math.max(1, Math.round(im.naturalWidth * ps)); ed.pH = Math.max(1, Math.round(im.naturalHeight * ps));
+      const cv = $('cv'); if (!cv) return;
+      cv.width = ed.pW; cv.height = ed.pH;
+      const ctx = cv.getContext('2d', { willReadFrequently: true });
+      ctx.fillStyle = '#000'; ctx.fillRect(0, 0, ed.pW, ed.pH);
+      ctx.drawImage(im, 0, 0, ed.pW, ed.pH);
+      ed.orig = ctx.getImageData(0, 0, ed.pW, ed.pH);
+      renderPreview();
+    } catch (_) {
+      if (tok === ed.token) toast('Nie udało się wczytać obrazu Lock do podglądu.');
+    }
+  }
+  async function renderPreview() {
+    if (!ed.orig) return;
+    if (ed.busy) { ed.pending = true; return; }
+    ed.busy = true;
+    const tok = ed.token;
+    const copy = new Uint8ClampedArray(ed.orig.data);
+    const buf = await runBlur(copy, ed.pW, ed.pH, sigmaFor(ed.pW, ed.pH, ed.local.amount), ed.local.dim);
+    ed.busy = false;
+    if (tok !== ed.token || !$('cv')) return;
+    ed.last = new ImageData(new Uint8ClampedArray(buf), ed.pW, ed.pH);
+    if (!ed.holding) $('cv').getContext('2d').putImageData(ed.last, 0, 0);
+    snapT = 0; const img = $('edBlurImg'); if (img) img.src = cvSnapshot();
+    if (ed.pending) { ed.pending = false; renderPreview(); }
+  }
+  function showOrig(on) {
+    ed.holding = on; $('badge').classList.toggle('on', on);
+    if (!ed.orig) return;
+    $('cv').getContext('2d').putImageData(on ? ed.orig : (ed.last || ed.orig), 0, 0);
+  }
+
+  // zapisy z edytora (z opóźnieniem, jeden naraz)
+  function scheduleNameSave() { clearTimeout(ed.saveT); ed.saveT = setTimeout(flushNameSave, 700); }
+  function flushNameSave() {
+    if (!ed.saveT) return; clearTimeout(ed.saveT); ed.saveT = null;
+    const s = curSet(); if (!s) return;
+    if ((s.car || '') === ed.local.car && (s.shot || '') === ed.local.shot) return;
+    dbw(state.db.doc('sets/' + s.id).update({ car: ed.local.car.trim(), shot: ed.local.shot.trim(), updatedAt: Date.now() }), 'nazwy').then(syncCounts);
+  }
+  function scheduleBlurSave() { clearTimeout(ed.blurT); ed.blurT = setTimeout(flushBlurSave, 600); }
+  function flushBlurSave() {
+    if (!ed.blurT) return; clearTimeout(ed.blurT); ed.blurT = null;
+    const s = curSet(); if (!s) return;
+    const b = s.blur || DEF_BLUR;
+    if (b.amount === ed.local.amount && b.dim === ed.local.dim) return;
+    dbw(state.db.doc('sets/' + s.id).update({ blur: { amount: ed.local.amount, dim: ed.local.dim }, updatedAt: Date.now() }), 'rozmycie');
+  }
+
+  // ---------------- przypisanie pliku do Lock/Home ----------------
+  async function assignFile(file, slot) {
+    const s = curSet(), p = curPack(); if (!s || !p) return;
+    const name = SLOTS[slot];
+    setBusy(true, 'Wczytuję obraz…', file.name || '');
+    let im, blob = file, type = (file.type || '').toLowerCase(), converted = false;
+    try { im = await loadImg(file); }
+    catch (_) { setBusy(false); toast('Nie mogę otworzyć tego pliku. Wybierz JPG, PNG albo WebP.'); return; }
+    const w = im.naturalWidth, h = im.naturalHeight;
+    try {
+      if (!/^image\/(jpeg|png|webp)$/.test(type)) { blob = await reencodeJpg(im); type = 'image/jpeg'; converted = true; }
+      const sig = await hashBuf(await blob.arrayBuffer()) || `${blob.size}-${w}x${h}`;
+      setBusy(false);
+
+      // ten sam plik gdzie indziej w paczce
+      const hits = [];
+      state.sets.forEach(o => ['lock', 'home'].forEach(k => { if (o[k] && o[k].sig === sig && !(o.id === s.id && k === slot)) hits.push(`${pad3(o.no)} (${SLOTS[k]})`); }));
+      if (hits.length) {
+        const r = await ask({ title: 'Ten plik już jest w paczce', text: `Ten sam obraz jest przypisany w: ${hits.join(', ')}.\nNa pewno chcesz użyć go też jako ${name} w zestawie ${pad3(s.no)}?`,
+          buttons: [{ label: 'Przypisz mimo to', value: true, kind: 'danger' }, { label: 'Anuluj', value: false }] });
+        if (!r) return;
+      }
+      // zastąpienie istniejącego pliku
+      const old = s[slot];
+      if (old && (old.asset || old.session)) {
+        if (old.sig === sig) { toast(`To ten sam plik, który już jest w ${name}.`); return; }
+        const r = await ask({ title: `Zastąpić ${name} w zestawie ${pad3(s.no)}?`,
+          text: `Obecny: ${old.src || 'bez nazwy'} · ${old.w}×${old.h}\nNowy: ${file.name || 'bez nazwy'} · ${w}×${h}\n\nPoprzedni plik zostanie usunięty z aplikacji.`,
+          buttons: [{ label: 'Zastąp', value: true, kind: 'danger' }, { label: 'Anuluj', value: false }] });
+        if (!r) return;
+      }
+
+      // zapis pliku
+      let asset = null, session = false;
+      if (blob.size > ASSET_MAX || !state.assets) {
+        const choice = await ask({
+          title: state.assets ? 'Plik jest za duży do zapisania' : 'Zapis obrazów niedostępny',
+          text: state.assets
+            ? `${file.name || 'Plik'} ma ${mb(blob.size)}, a aplikacja zapisuje najwyżej 200 MB na plik.`
+            : 'Nie mogę zapisać obrazów w pamięci telefonu.',
+          buttons: [
+            ...(state.assets && type !== 'image/jpeg' ? [{ label: 'Zapisz jako JPG (jakość 95%)', value: 'jpg', kind: 'pri' }] : []),
+            { label: 'Użyj tylko w tej sesji', value: 'session' },
+            { label: 'Anuluj', value: null }]
+        });
+        if (!choice) return;
+        if (choice === 'jpg') {
+          setBusy(true, 'Zamieniam na JPG…');
+          blob = await reencodeJpg(im); type = 'image/jpeg'; converted = true;
+          setBusy(false);
+          if (blob.size > ASSET_MAX) {
+            const c2 = await ask({ title: 'Nadal za duży', text: `Po zamianie plik ma ${mb(blob.size)}. Mogę go użyć tylko w tej sesji: wyeksportuj zestaw, zanim zamkniesz aplikację.`, buttons: [{ label: 'Użyj w tej sesji', value: true, kind: 'pri' }, { label: 'Anuluj', value: false }] });
+            if (!c2) return; session = true;
+          }
+        } else session = true;
+      }
+      if (!session) {
+        setBusy(true, `Zapisuję ${name}…`, `${mb(blob.size)}`);
+        try {
+          const r = await state.assets.upload(blob, { type });
+          asset = r.id; blobCache.set(asset, blob);
+        } catch (e) {
+          setBusy(false);
+          const code = e && e.code;
+          const msg = code === 'quota_or_state' ? 'Pamięć telefonu dla aplikacji jest pełna.'
+            : code === 'too_large' ? 'Plik jest za duży.'
+            : code === 'rate_limited' ? 'Za dużo zapisów naraz.'
+            : 'Nie udało się zapisać obrazu.';
+          const c3 = await ask({ title: msg, text: 'Mogę użyć obrazu tylko w tej sesji: wyeksportuj zestaw, zanim zamkniesz aplikację.', buttons: [{ label: 'Użyj w tej sesji', value: true, kind: 'pri' }, { label: 'Anuluj', value: false }] });
+          if (!c3) return; session = true;
+        }
+      }
+      setBusy(true, `Zapisuję ${name}…`);
+      const fw = converted ? fitMax(w, h).w : w, fh = converted ? fitMax(w, h).h : h;
+      const data = { asset, session, w: fw, h: fh, ext: extOf(type), bytes: blob.size, src: file.name || '', sig, thumb: makeThumb(im), at: Date.now() };
+      if (session) sessionFiles.set(sKey(s.id, slot), blob); else sessionFiles.delete(sKey(s.id, slot));
+      const ok = await dbw(state.db.doc('sets/' + s.id).update({ [slot]: data, updatedAt: Date.now() }), name);
+      if (!ok) { if (asset) state.assets.delete(asset).catch(() => {}); return; }
+      if (old && old.asset && old.asset !== asset && state.assets) { blobCache.delete(old.asset); state.assets.delete(old.asset).catch(() => {}); }
+      syncCounts();
+      toast(`${name} gotowy${converted ? ' (zapisany jako JPG)' : ''}${session ? ' · tylko w tej sesji' : ''}`);
+    } catch (_) {
+      toast('Coś poszło nie tak przy wczytywaniu obrazu. Spróbuj jeszcze raz.');
+    } finally { setBusy(false); }
+  }
+
+  async function slotMenu(slot) {
+    const s = curSet(); if (!s) return;
+    const d = s[slot]; const name = SLOTS[slot];
+    const r = await ask({ title: `${name} · zestaw ${pad3(s.no)}`, text: `${d.src || 'bez nazwy'} · ${d.w}×${d.h} · ${mb(d.bytes || 0)}${d.session ? '\nPlik tylko w tej sesji.' : ''}`,
+      buttons: [{ label: 'Podgląd', value: 'view' }, { label: 'Zastąp plik', file: slot }, { label: `Usuń ${name} z zestawu`, value: 'del', kind: 'danger' }, { label: 'Anuluj', value: null }] });
+    if (r === 'view') {
+      const p = curPack();
+      const cap = fileName(p, s, name, d.ext, ed.local);
+      try {
+        const b = await blobFor(s, slot, true);
+        if (ovUrl) URL.revokeObjectURL(ovUrl); ovUrl = URL.createObjectURL(b); openView(ovUrl, cap);
+      } catch (_) { toast('Nie udało się wczytać obrazu.'); }
+    } else if (r === 'del') {
+      const c = await ask({ title: `Usunąć ${name}?`, text: `Zestaw ${pad3(s.no)} stanie się niekompletny.`, buttons: [{ label: 'Usuń', value: true, kind: 'danger' }, { label: 'Anuluj', value: false }] });
+      if (!c) return;
+      if (await dbw(state.db.doc('sets/' + s.id).update({ [slot]: null, updatedAt: Date.now() }), name)) {
+        sessionFiles.delete(sKey(s.id, slot));
+        if (d.asset && state.assets) { blobCache.delete(d.asset); state.assets.delete(d.asset).catch(() => {}); }
+        syncCounts();
+      }
+    }
+  }
+
+  async function deleteSet() {
+    const s = curSet(); if (!s) return;
+    const c = await ask({ title: `Usunąć zestaw ${pad3(s.no)}?`, text: 'Zestaw zniknie razem z obrazami. Numery pozostałych zestawów się nie zmienią, a ten numer nie zostanie użyty ponownie.', buttons: [{ label: 'Usuń zestaw', value: true, kind: 'danger' }, { label: 'Anuluj', value: false }] });
+    if (!c) return;
+    ed.saveT && clearTimeout(ed.saveT); ed.saveT = null; ed.blurT && clearTimeout(ed.blurT); ed.blurT = null;
+    setBusy(true, 'Usuwam zestaw…');
+    try { await deleteSetData(s); closeEditor(); syncCounts(); }
+    catch (_) { toast('Nie udało się usunąć zestawu.'); }
+    finally { setBusy(false); }
+  }
+
+  async function blurToAll() {
+    const p = curPack(); if (!p) return;
+    const b = { amount: ed.local.amount, dim: ed.local.dim };
+    const c = await ask({ title: 'Zastosować do wszystkich?', text: `Siła ${b.amount}, przyciemnienie ${b.dim}% dla wszystkich ${state.sets.length} zestawów w paczce i jako domyślne dla nowych.`, buttons: [{ label: 'Zastosuj', value: true, kind: 'pri' }, { label: 'Anuluj', value: false }] });
+    if (!c) return;
+    flushBlurSave();
+    setBusy(true, 'Zapisuję ustawienia…');
+    try {
+      for (const s of state.sets) {
+        const o = s.blur || DEF_BLUR;
+        if (o.amount !== b.amount || o.dim !== b.dim) await state.db.doc('sets/' + s.id).update({ blur: b, updatedAt: Date.now() });
+      }
+      await state.db.doc('packs/' + p.id).update({ blur: b });
+      toast('Ustawienia rozmycia zapisane dla całej paczki.');
+    } catch (_) { toast('Nie wszystkie zestawy udało się zaktualizować.'); }
+    finally { setBusy(false); }
+  }
+
+  // ---------------- eksport ----------------
+  // lista plików do eksportu i kontrola duplikatów nazw
+  async function buildGroups(p, sets) {
+    const groups = sets.map(s => {
+      const items = [];
+      if (avail(s, 'lock')) items.push({ s, v: 'Lock', slot: 'lock', name: fileName(p, s, 'Lock', s.lock.ext) });
+      if (avail(s, 'home')) items.push({ s, v: 'Home', slot: 'home', name: fileName(p, s, 'Home', s.home.ext) });
+      if (avail(s, 'lock')) items.push({ s, v: 'Blur', slot: 'blur', name: fileName(p, s, 'Blur', 'jpg') });
+      const est = (avail(s, 'lock') ? s.lock.bytes * 2.3 : 0) + (avail(s, 'home') ? s.home.bytes : 0);
+      return { s, items, est };
+    }).filter(g => g.items.length);
+    const seen = new Map(), dup = [];
+    groups.forEach(g => g.items.forEach(it => { const k = it.name.toLowerCase(); if (seen.has(k)) dup.push(it.name); seen.set(k, 1); }));
+    if (dup.length) {
+      await ask({ title: 'Powtarzające się nazwy plików', text: `Te nazwy występują więcej niż raz:\n${dup.join('\n')}\n\nPopraw auto lub ujęcie w tych zestawach.`, buttons: [{ label: 'OK', value: true }] });
+      return null;
+    }
+    return groups;
+  }
+  async function canSave() {
+    if (state.downloads) return true;
+    await ask({ title: 'Zapis plików niedostępny', text: 'Ta przeglądarka nie pozwala zapisywać plików.', buttons: [{ label: 'OK', value: true }] });
+    return false;
+  }
+  async function itemBlob(it, scaled) {
+    if (it.slot !== 'blur') return blobFor(it.s, it.slot);
+    // Blur zawsze powstaje z obrazu Lock
+    const r = await renderBlurFull(await blobFor(it.s, 'lock'), it.s.blur || DEF_BLUR);
+    if (r.scaled) scaled.push(`${it.name} (${r.w}×${r.h})`);
+    return r.blob;
+  }
+
+  // zapis plików po kolei: każdy trafia tam, gdzie wskażesz w oknie zapisu
+  async function saveSeparate(sets) {
+    const p = curPack(); if (!p || !sets.length || !await canSave()) return;
+    flushBlurSave(); flushNameSave();
+    const groups = await buildGroups(p, sets); if (!groups) return;
+    const items = groups.flatMap(g => g.items);
+    const failed = [], scaled = [], skipped = [];
+    for (let i = 0; i < items.length; i++) {
+      const it = items[i];
+      setBusy(true, `Przygotowuję plik ${i + 1}/${items.length}`, it.name);
+      await sleep(20);
+      let blob;
+      try { blob = await itemBlob(it, scaled); }
+      catch (_) { failed.push(it.name); continue; }
+      finally { setBusy(false); }
+      if (i > 0) await sleep(400);
+      let tries = 0, res;
+      while (true) {
+        try { await state.downloads.save({ filename: it.name, data: blob }); res = 'ok'; break; }
+        catch (e) {
+          const code = e && e.code;
+          if (code === 'declined') {
+            const r = await ask({ title: 'Pominięto plik', text: it.name, buttons: [{ label: 'Dalej', value: true, kind: 'pri' }, { label: 'Przerwij', value: false }] });
+            res = r ? 'skip' : 'stop'; break;
+          }
+          if (tries++ < 2 && code !== 'too_large' && code !== 'unavailable' && code !== 'not_granted') {
+            const r = await ask({ title: `Plik ${i + 1}/${items.length} gotowy`, text: it.name, buttons: [{ label: 'Zapisz', value: true, kind: 'pri' }, { label: 'Przerwij', value: false }] });
+            if (!r) { res = 'stop'; break; }
+            continue;
+          }
+          res = 'fail'; break;
+        }
+      }
+      if (res === 'stop') return;
+      if (res === 'skip') skipped.push(it.name);
+      if (res === 'fail') failed.push(it.name);
+    }
+    const notes = [];
+    if (failed.length) notes.push(`Nie udało się zapisać:\n${failed.join('\n')}`);
+    if (skipped.length) notes.push(`Pominięte:\n${skipped.join('\n')}`);
+    if (scaled.length) notes.push(`Zmniejszone przez limit Safari (16,7 Mpx):\n${scaled.join('\n')}`);
+    if (notes.length) await ask({ title: 'Zapis zakończony z uwagami', text: notes.join('\n\n'), buttons: [{ label: 'OK', value: true }] });
+    else toast(`Zapisano ${items.length} ${items.length >= 2 && items.length <= 4 ? 'pliki' : 'plików'}.`, 4000);
+  }
+
+  async function exportSets(sets, base, flat) {
+    const p = curPack(); if (!p || !sets.length || !await canSave()) return;
+    flushBlurSave(); flushNameSave();
+    const groups = await buildGroups(p, sets); if (!groups) return;
+    // podział na części, żeby telefonowi nie zabrakło pamięci
+    const chunks = [[]]; let acc = 0;
+    for (const g of groups) {
+      if (acc + g.est > CHUNK_BYTES && chunks[chunks.length - 1].length) { chunks.push([]); acc = 0; }
+      chunks[chunks.length - 1].push(g); acc += g.est;
+    }
+    const total = groups.reduce((n, g) => n + g.items.length, 0);
+    let done = 0; const failed = []; const scaled = []; const packed = [];
+    for (let ci = 0; ci < chunks.length; ci++) {
+      if (ci > 0) {
+        const go = await ask({ title: `Część ${ci} z ${chunks.length} gotowa`, text: 'Przygotować następną część paczki?', buttons: [{ label: `Przygotuj część ${ci + 1}`, value: true, kind: 'pri' }, { label: 'Przerwij', value: false }] });
+        if (!go) return;
+      }
+      const zip = new Zip();
+      try {
+        for (const g of chunks[ci]) {
+          for (const it of g.items) {
+            done++;
+            setBusy(true, `Pakuję ${done}/${total}${chunks.length > 1 ? ` · część ${ci + 1}/${chunks.length}` : ''}`, it.name);
+            await sleep(20);
+            try {
+              const blob = await itemBlob(it, scaled);
+              const u8 = new Uint8Array(await blob.arrayBuffer());
+              if (!u8.length) throw new Error('empty');
+              zip.add(flat ? it.name : zipPath(p, it.v, it.name), u8);
+              packed.push(it.name);
+            } catch (_) { failed.push(it.name); }
+          }
+        }
+      } finally { setBusy(false); }
+      if (!zip.count) { toast('Nie udało się przygotować żadnego pliku.'); return; }
+      const fname = chunks.length > 1 ? `${base}_cz${ci + 1}z${chunks.length}.zip` : `${base}.zip`;
+      setBusy(true, 'Składam ZIP…', fname);
+      const zb = zip.blob();
+      setBusy(false);
+      try {
+        await state.downloads.save({ filename: fname, data: zb });
+      } catch (e) {
+        const code = e && e.code;
+        if (code === 'declined') { toast('Anulowano zapis.'); return; }
+        if (code === 'rate_limited') { toast('Poprzednie okno zapisu jest jeszcze otwarte. Spróbuj za chwilę.'); return; }
+        if (code === 'too_large') { toast('Plik ZIP jest za duży dla tego miejsca zapisu.'); return; }
+        toast('Nie udało się zapisać pliku ZIP.'); return;
+      }
+    }
+    const notes = [];
+    if (failed.length) notes.push(`Nie udało się dołączyć:\n${failed.join('\n')}`);
+    if (scaled.length) notes.push(`Zmniejszone przez limit Safari (16,7 Mpx):\n${scaled.join('\n')}`);
+    if (notes.length) await ask({ title: 'Eksport zakończony z uwagami', text: notes.join('\n\n'), buttons: [{ label: 'OK', value: true }] });
+    else if (packed.length <= 6) await ask({ title: `W ZIP-ie jest ${packed.length} z ${total} plików`, text: packed.join('\n'), buttons: [{ label: 'OK', value: true }] });
+    else toast(`Gotowe: w ZIP-ie jest ${packed.length} z ${total} plików.`, 5000);
+  }
+
+  async function exportPack() {
+    const p = curPack(); if (!p) return;
+    const comp = state.sets.filter(s => statusOf(s).complete);
+    const inc = state.sets.length - comp.length;
+    let list = comp;
+    if (inc) {
+      const r = await ask({ title: 'Część zestawów jest niekompletna', text: `${comp.length} kompletnych, ${inc} niekompletnych.`,
+        buttons: [{ label: `Tylko kompletne (${comp.length})`, value: 'c', kind: 'pri' }, { label: `Wszystkie z tym, co mają (${state.sets.length})`, value: 'a' }, { label: 'Anuluj', value: null }] });
+      if (!r) return;
+      if (r === 'a') list = state.sets;
+    }
+    const n = list.reduce((k, s) => k + (avail(s, 'lock') ? 2 : 0) + (avail(s, 'home') ? 1 : 0), 0);
+    const how = await ask({ title: 'Jak zapisać paczkę?', text: `${list.length} ${list.length === 1 ? 'zestaw' : 'zestawów'}, ${n} plików.`,
+      buttons: [{ label: `Osobne pliki (${n} okien zapisu)`, value: 'files', kind: 'pri' }, { label: 'Jeden ZIP z folderami Lock / Home / Blur', value: 'zip' }, { label: 'Anuluj', value: null }] });
+    if (how === 'files') saveSeparate(list);
+    else if (how === 'zip') exportSets(list, `${PREFIX}_${p.token}_${FORMAT}`);
+  }
+  async function exportOne(mode) {
+    const s = curSet(), p = curPack(); if (!s || !p) return;
+    flushNameSave();
+    const st = statusOf(s, ed.local);
+    if (!avail(s, 'lock') && !avail(s, 'home')) { toast('Ten zestaw nie ma jeszcze żadnego obrazu.'); return; }
+    if (!st.complete) {
+      const r = await ask({ title: 'Zestaw jest niekompletny', text: `Brakuje: ${st.miss.join(', ')}.`, buttons: [{ label: 'Eksportuj to, co jest', value: true }, { label: 'Anuluj', value: false }] });
+      if (!r) return;
+    }
+    const view = Object.assign({}, s, { car: ed.local.car, shot: ed.local.shot, blur: { amount: ed.local.amount, dim: ed.local.dim } });
+    if (mode === 'files') saveSeparate([view]);
+    else exportSets([view], `${PREFIX}_${p.token}_${pad3(s.no)}_${partToken(view.car) || 'BRAK-AUTA'}_${partToken(view.shot) || 'BRAK-UJECIA'}_${FORMAT}`, true);
+  }
+
+  // ---------------- zdarzenia ----------------
+  document.addEventListener('click', e => {
+    const pick = e.target.closest('[data-pick]');
+    if (pick) { state.pickSlot = pick.dataset.pick; return; }   // label otwiera wybór pliku sam
+  }, true);
+
+  $('app').addEventListener('click', e => {
+    const a = e.target.closest('[data-act]');
+    if (a) {
+      const act = a.dataset.act;
+      if (act === 'home') location.hash = '';
+      else if (act === 'newPack') newPack();
+      else if (act === 'packMenu') packMenu();
+      else if (act === 'addSet') addSet();
+      else if (act === 'exportPack') exportPack();
+      return;
+    }
+    const f = e.target.closest('#filter button');
+    if (f) { state.filter = f.dataset.f; render(); return; }
+    const pk = e.target.closest('[data-pack]');
+    if (pk) { location.hash = 'p-' + pk.dataset.pack; return; }
+    const st = e.target.closest('[data-set]');
+    if (st) openEditor(st.dataset.set);
+  });
+
+  $('ed').addEventListener('click', e => {
+    const a = e.target.closest('[data-ed]'); if (!a) return;
+    const act = a.dataset.ed;
+    if (act === 'close') closeEditor();
+    else if (act === 'slot') slotMenu(a.dataset.slot);
+    else if (act === 'viewBlur') {
+      const s = curSet(), p = curPack();
+      if (ed.last) {
+        const t = document.createElement('canvas'); t.width = ed.pW; t.height = ed.pH; t.getContext('2d').putImageData(ed.last, 0, 0);
+        openView(t.toDataURL('image/jpeg', 0.9), fileName(p, s, 'Blur', 'jpg', ed.local) + ' · podgląd');
+      } else toast('Podgląd Blur jeszcze się liczy.');
+    }
+    else if (act === 'blurDefault') {
+      const p = curPack(); if (!p) return;
+      dbw(state.db.doc('packs/' + p.id).update({ blur: { amount: ed.local.amount, dim: ed.local.dim } }), 'domyślne').then(ok => ok && toast('Nowe zestawy dostaną te ustawienia rozmycia.'));
+    }
+    else if (act === 'blurAll') blurToAll();
+    else if (act === 'export') exportOne('zip');
+    else if (act === 'exportFiles') exportOne('files');
+    else if (act === 'delete') deleteSet();
+  });
+
+  $('fileIn').addEventListener('change', e => {
+    const f = e.target.files && e.target.files[0]; e.target.value = '';
+    const slot = state.pickSlot; state.pickSlot = null;
+    if (f && slot && state.edId) assignFile(f, slot);
+  });
+
+  // ---------------- start ----------------
+  const use = n => {
+    try { return (window.claude && window.claude.use) ? Promise.resolve(window.claude.use(n)).catch(() => null) : Promise.resolve(null); }
+    catch (_) { return Promise.resolve(null); }
+  };
+  (async () => {
+    const [db, assets, downloads] = await Promise.all([use('db'), use('assets'), use('downloads')]);
+    state.db = db; state.assets = assets; state.downloads = downloads; state.booting = false;
+    if (!db) { render(); return; }
+    const slow = setTimeout(() => { state.packsSlow = true; render(); }, 10000);
+    db.collection('packs').onSnapshot(snap => {
+      if (!snap.metadata.fromCache) clearTimeout(slow);
+      state.packs = snap.docs.map(d => Object.assign({ id: d.id }, d.data()));
+      state.packsReady = true; state.packsSlow = false;
+      render();
+      if (state.edId) updateEditor();
+    }, () => { clearTimeout(slow); state.packsErr = true; render(); });
+    route();
+  })();
+})();
+</script>
+</body>
+</html>
